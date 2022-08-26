@@ -1,20 +1,22 @@
 import { Component } from '@angular/core';
-
-import { products } from '../products';
+import { Names } from '../names';
 
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
+  styleUrls: ['./product-list.component.css'],
 })
 export class ProductListComponent {
-  products = products;
+  Names: Array<any> = Names;
 
   share() {
-    window.alert('The product has been shared!');
+    window.alert('View Parent Component!');
+  }
+
+  onChild() {
+    window.alert('View Child Component!');
   }
 }
-
 
 /*
 Copyright Google LLC. All Rights Reserved.

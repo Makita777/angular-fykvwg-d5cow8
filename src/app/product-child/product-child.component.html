@@ -1,14 +1,18 @@
 <table>
   <tr>
-    <td>Child Aさん</td>
+    <td>{{ Names[3].name }}</td>
     <td>
-      <button type="button" [wjTooltip]="'1Gr'" [wjTooltipPosition]="'Right'">
-        Child Click
+      <button type="button" class="tooltip" (click)="child.emit()">
+        Child Click<span>{{ Names[3].groupNo }}</span>
       </button>
     </td>
   </tr>
   <tr>
-    <td>Child Bさん</td>
-    <td><button type="button">Child Click</button></td>
+    <td>{{ Names[4].name }}</td>
+    <td>
+      <button type="button" class="tooltip" (click)="child.emit()">
+        Child Click<span>{{ Names[4].groupNo }}</span>
+      </button>
+    </td>
   </tr>
 </table>

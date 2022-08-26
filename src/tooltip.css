@@ -1,0 +1,42 @@
+.tooltip:hover span {
+  animation: tooltips-horz 300ms ease-out forwards;
+  display: block;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tooltip span {
+  display: none;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  content: '';
+  background: #000;
+  min-width: 150px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  padding: 6px 0 7px 0;
+  transform: translate(-50%, -0.5em);
+  opacity: 0;
+}
+
+.tooltip > span:after {
+  position: absolute;
+  content: '';
+  bottom: -19px;
+  left: 50%;
+  margin-left: -8px;
+  border-top: 10px solid #000;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 8px solid transparent;
+}
+
+@keyframes tooltips-horz {
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}

@@ -2,20 +2,32 @@
 
 <table>
   <tr>
-    <td>Aさん</td>
-    <td><button type="button">Parent Click</button></td>
+    <td>{{ Names[0].name }}</td>
+    <td>
+      <button type="button" class="tooltip" (click)="share()">
+        Parent Click<span>{{ Names[0].groupNo }}</span>
+      </button>
+    </td>
   </tr>
   <tr>
-    <td>Bさん</td>
-    <td><button type="button">Parent Click</button></td>
+    <td>{{ Names[1].name }}</td>
+    <td>
+      <button type="button" class="tooltip" (click)="share()">
+        Parent Click<span>{{ Names[1].groupNo }}</span>
+      </button>
+    </td>
   </tr>
   <tr>
-    <td>Cさん</td>
-    <td><button type="button">Parent Click</button></td>
+    <td>{{ Names[2].name }}</td>
+    <td>
+      <button type="button" class="tooltip" (click)="share()">
+        Parent Click<span>{{ Names[2].groupNo }}</span>
+      </button>
+    </td>
   </tr>
 </table>
 
-<app-product-child></app-product-child>
+<app-product-child (child)="onChild()"></app-product-child>
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.
